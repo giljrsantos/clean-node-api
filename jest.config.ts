@@ -20,7 +20,7 @@ const config: Config = {
 
   // coverageProvider: 'v8',
 
-  testEnvironment: 'node'
+  testEnvironment: 'jest-environment-node'
 
 }
 
