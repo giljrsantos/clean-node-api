@@ -2,7 +2,6 @@
 
 import { SignUpController } from './signup'
 
-/* eslint-disable @typescript-eslint/indent */
 describe('SignUp Controller', () => {
     it('Should return 400 if no name is provided', () => {
         const sut = new SignUpController()
