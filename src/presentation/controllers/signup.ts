@@ -1,5 +1,7 @@
 import { HttpRequest, HttpResponse } from "../protocols/http"
 
+import { MissingParamError } from "../errors/missing-param-error"
+
 /* eslint-disable padded-blocks */
 export class SignUpController {
     handle(httpRequest: HttpRequest): HttpResponse {
@@ -8,7 +10,7 @@ export class SignUpController {
 
             return {
                 statusCode: 400,
-                body: new Error('Missing param: name')
+                body: new MissingParamError('name')
             }
 
         }
@@ -17,7 +19,7 @@ export class SignUpController {
 
             return {
                 statusCode: 400,
-                body: new Error('Missing param: email')
+                body: new MissingParamError('email')
             }
 
         }
